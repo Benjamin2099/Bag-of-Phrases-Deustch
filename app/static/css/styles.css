@@ -1,0 +1,122 @@
+/* Kommentierte Zusammenfassung der CSS-Datei:
+    1.Formatierungen und Layouts: 30 Minuten,umfasst globale Einstellungen und Body-Styling. 
+    2. Chatbox und Unterstützungs-Chat-Elemente: 1-1.5 Stunden, Design und Styling der Chatbox in verschiedenen Zuständen und Nachrichtenstile.
+    3. Feedback-Formular: 1 Stunde, Gestaltung spezifischer Zustände und Eingabeelemente.
+    4. Allgemeine UI- Komponenten (Karten, Links, Buttons): 1-1.5 Stunden, umfasst grundlegendes Gestalten und einfache Hover-Effekte.
+    5. Feinabstimmung und Responsivität: 1.5 Stunde, schnelle Anpassungen für Mobilgeräte.
+    6. Integration und Tests: 36 Minute, Basisintegration und Funktionsprüfung.
+     Geschätzte Entwicklungszeiten  (7:40-8 Stunden insgesamt):
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* 
+https://www.w3schools.com/css/css_navbar.asp
+Stile für den Body, inklusive Schrift und Hintergrundfarbe */
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 95%;
+    background: #F1F1F1;
+}
+*, html {
+    --primary: #124289cf;  /* Dunkelblau */
+    --secondary: #487fc6ee;  /* Helles Blau */
+}
+/* Stile für Nachrichten-Elemente */
+.messages__item { 
+    padding: 8px 12px; /* Inneres Padding jeder Nachricht */
+    margin-top: 10px; /* Vertikaler Abstand zwischen den Nachrichten */
+    border-radius: 20px; /* Abgerundete Ecken für jede Nachricht */
+    background: #E0E0E0; /* Hintergrundfarbe der Nachricht */
+}
+.chatbox {/* Grundlegende Positionierung und Dimensionen der Chatbox */
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    width: 300px;
+    z-index: 1000;
+ }
+/* Versteckter Zustand der Chat-Support-Box */ 
+.chatbox__support {
+    display: flex;
+    flex-direction: column;
+    background:  white;
+    width: 300px;
+    height: 350px;
+    z-index: -123456;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+/* Aktiver Zustand der Chatbox mit Animation und erhöhter Sichtbarkeit */
+.chatbox--active {
+    transform: translateY(-40px);
+    z-index: 123456;
+    opacity: 1;
+} 
+.chatbox__button {
+    text-align: right;
+}
+/* Stile für den Senden-Button innerhalb der Chatbox */
+.send__button { 
+    padding: 7px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+/* Nachrichtenbereich mit Scroll-Funktionalität und festgelegter Höhe */
+.chatbox__messages {
+    display: flex;
+    flex-direction: column; /* Ändert die Richtung, sodass Elemente von oben nach unten angezeigt werden */
+    overflow-y: scroll; /* Ermöglicht das vertikale Scrollen */
+    height: 350px; /* Festgelegte Höhe für den Nachrichtenbereich */
+}
+/* Spezielle Stile für Nachrichten vom Betreiber und Besucher */
+.messages__item--operator {
+    margin-left: auto; 
+    background: var(--primary);
+     color: white;
+}
+.messages__item--visitor {
+    margin-right: auto;  
+    background: var(--secondary);
+    color: white;
+}  
+.chatbox__footer {
+    position: sticky;
+    bottom: 0;
+}
+.welcome-text {
+    font-size: 1.1em;
+    color: white;
+}
+.disclaimer-text {
+    font-size: 0.75em;
+    color: white;
+}
+.disclaimer-text a {
+    color: white;
+    text-decoration: underline;
+}
+.chatbox__support {
+    background: white;
+    height: 450px;
+    width: 350px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 20px;
+ border-top-right-radius: 20px;
+} 
+/* Stil der Chatbx-Kopfzeile mit hinterlegter Farbe, Flexbox-Ausrichtung und abgerundeten Ecken */
+.chatbox__header { 
+    background: var(--primary);
+     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}

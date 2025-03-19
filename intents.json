@@ -1,0 +1,159 @@
+    {
+    "_comment": "Dieser JSON-Datensatz definiert die verschiedenen Intents für einen Chatbot, einschließlich Benutzerfragen (patterns) und Bot-Antworten (responses) für ein dynamisches Dialogsystem. Geschätzte Bearbeitungszeit: 5-6 Stunden.",
+    "intents": [
+            {
+            "tag": "begrüßung",
+            "patterns": [
+            "Hallo",
+            "Hallo guten Tag",
+            "Hi",
+            "Hey",
+            "Wie geht's",
+            "Servus",
+            "Moin",
+            "Hi there",
+            "Tag",
+            "Mahlzeit",
+            "Grüezi"
+            ],
+            "responses": [
+            " -Assistent! Wie kann ich Ihnen im Bereich Maschinenbau und Anlagenbau helfen?",
+            "Hallo und willkommen bei XY-Assistent! Schön, dass Sie da sind. Wie kann ich Ihnen im Bereich Maschinenbau und Anlagenbau weiterhelfen?",
+            "Servus und willkommen! Ich bin Ihr XY-Assistent für Maschinenbau und Anlagenbau. Wie kann ich Ihnen weiterhelfen?",
+            "Willkommen beim XY-Assistent. Wie kann ich Ihnen im Bereich Maschinenbau und Anlagenbau dienen?",
+            "Willkommen bei XY-Assistentch-Assistent. Was möchten Sie im Bereich Maschinenbau und Anlagenbau besprechen?",
+            "Sie sind verbunden mit dem XY-Assistent. Wie kann ich Ihnen im Bereich Maschinenbau und Anlagenbau behilflich sein?",
+            "Hallöchen! Willkommen beim XY-Assistent. Was kann ich im Bereich Maschinenbau und Anlagenbau für Sie tun?",
+            "Schön, dass Sie hier sind! Willkommen bei XY-Assistent. Wie kann ich Ihnen im Bereich Maschinenbau und Anlagenbau helfen?",
+            "Herzlich willkommen bei eXY-Assistent! Was kann ich im Bereich Maschinenbau und Anlagenbau für Sie tun?",
+            "Willkommen! Ich freue mich, Ihnen im Bereich Maschinenbau und Anlagenbau behilflich zu sein. Wie kann ich helfen?"
+            ]
+            },
+            {
+            "tag": "wie_gehts",
+            "patterns": [
+            "wie gehts",
+            "Wie geht's?",
+            "Wie geht es dir?",
+            "Wie geht es Ihnen?",
+            "Wie läuft's?",
+            "Alles klar bei dir?",
+            "Wie steht's?",
+            "Was geht ab?",
+            "Wie fühlst du dich?",
+            "Was machst du so?",
+            "Wie ist die Lage?"
+            ],
+            "responses": [
+            "Mir geht es gut, danke! Wie kann ich Ihnen im Bereich Maschinenbau und Anlagenbau helfen?",
+            "Alles bestens, danke der Nachfrage! Was kann ich im Bereich Maschinenbau und Anlagenbau für Sie tun?",
+            "Danke, mir geht es gut! Wie kann ich Ihnen im Bereich Maschinenbau und Anlagenbau weiterhelfen?",
+            "Alles in Ordnung, vielen Dank! Wie kann ich Ihnen im Bereich Maschinenbau und Anlagenbau behilflich sein?",
+            "Mir geht's super, danke! Was gibt es im Bereich Maschinenbau und Anlagenbau zu besprechen?",
+            "Danke, alles klar! Wie kann ich Ihnen im Bereich Maschinenbau und Anlagenbau unterstützen?",
+            "Mir geht es gut, danke! Was möchten Sie im Bereich Maschinenbau und Anlagenbau wissen?",
+            "Alles gut hier, danke! Wie kann ich Ihnen im Bereich Maschinenbau und Anlagenbau assistieren?",
+            "Mir geht es hervorragend, danke! Was kann ich im Bereich Maschinenbau und Anlagenbau für Sie tun?",
+            "Danke der Nachfrage, mir geht es prima! Wie kann ich Ihnen im Bereich Maschinenbau und Anlagenbau weiterhelfen?"
+            ]
+            },
+            {
+            "tag": "lustig",
+            "patterns": [
+            "Erzähl mir einen Witz!",
+            "Erzähl etwas Lustiges!",
+            "Kannst du einen Witz?",
+            "Kennst du einen Witz?",
+            "Mach einen Witz",
+            "Erzähl mir was Lustiges",
+            "Hast du einen Witz?",
+            "Ich möchte lachen"
+            ],
+            "responses": [
+            "Warum hat der Hipster seinen Mund verbrannt? Er hat den Kaffee getrunken, bevor er cool war.",
+            "Was hat der Büffel gesagt, als sein Sohn aufs College ging? Bison.",
+            "Warum können Geister so schlecht lügen? Weil man durch sie hindurchsieht.",
+            "Was ist orange und rennt durch den Wald? Eine Wanderine.",
+            "Wie nennt man einen Bumerang, der nicht zurückkommt? Einen Stock."
+            ]
+            },
+            {
+            "tag": "job_suche",
+            "patterns": [
+            "Ich suche einen Job",
+            "Gibt es offene Stellen?",
+            "Haben Sie freie Stellen?",
+            "Welche Jobs bieten Sie an?",
+            "Ich bin auf Jobsuche",
+            "Gibt es Karrieremöglichkeiten?",
+            "Welche Karrieremöglichkeiten gibt es bei Ihnen?",
+            "Jobsuche",
+            "Jobangebote",
+            "Ich suche Job Angebote"
+            ],
+            "responses": [
+            "Hier sind unsere aktuellen Stellenangebote: ",
+            "Wir haben mehrere spannende Stellenangebote! Klicken Sie hier, um mehr zu erfahren: ",
+            "Interessiert an einer Karriere bei uns? Schauen Sie sich hier unsere offenen Stellen an: ",
+            "Wir bieten verschiedene Karrieremöglichkeiten. Besuchen Sie unsere Jobseite: ",
+            "Schauen Sie sich unsere aktuellen Jobangebote an: ",
+            ]
+            },
+            {
+            "tag": "verabschiebung",
+            "patterns": [
+            "Bis später",
+            "Auf Wiedersehen",
+            "Ciao",
+            "Mach's gut",
+            "Bis bald",
+            "Bis dann"
+            ],
+            "responses": [
+            "Bis später, vielen Dank für Ihren Besuch",
+            "Tschüss! Kommen Sie bald wieder.",
+            "Auf Wiedersehen! Es war mir eine Freude, Ihnen zu helfen.",
+            "Bis bald! Ich freue mich darauf, Ihnen wieder zu assistieren.",
+            "Ciao! Passen Sie auf sich auf.",
+            "Mach's gut! Bis zum nächsten Mal.",
+            "Wir sehen uns! Viel Erfolg weiterhin.",
+            "Bis dann! Alles Gute.",
+            "Tschö! Bleiben Sie gesund."
+            ]
+            },
+            {
+            "tag": "dank",
+            "patterns": [
+            "Danke",
+            "Vielen Dank",
+            "Das hilft mir",
+            "Danke schön!",
+            "Danke für Ihre Hilfe",
+            "Ich bin dankbar",
+            "Ich schätze das",
+            "Herzlichen Dank",
+            "Dankeschön",
+            "Besten Dank",
+            "Du hast mir sehr geholfen",
+            "Danke dir",
+            "Super, danke!",
+            "Ich danke Ihnen",
+            "Dank dir"
+            ],
+            "responses": [
+            "Gerne!",
+            "Jederzeit!",
+            "Ich helfe gerne",
+            "Es freut mich, dass ich helfen konnte!",
+            "Kein Problem, immer wieder gerne.",
+            "Das mache ich gerne für Sie.",
+            "Es war mir ein Vergnügen, Ihnen zu helfen.",
+            "Ich freue mich, dass es hilfreich war!",
+            "Bitte schön!"
+            ]
+            }
+
+    ]
+}
+
+

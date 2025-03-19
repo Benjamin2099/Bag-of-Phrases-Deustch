@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Meta-Tags im <head> ist entscheidend für responsives Design -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Bootstrap CSS für responsive Layouts und Komponentenstile -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Chatbot</title>
+    <!-- CSRF Token Meta Tag -->
+</head>
+    <!-- Chatbot -->
+    <div class="container">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                    <!-- Bild des Chatbots 'Benjamin', eingebunden über einen direkten Dropbox link. -->
+                        <img src="your picture" alt="image">
+                    </div>
+                    <!-- Eine kurze vorstellung als Text im Header Bereich des chatbots. -->
+                    <div class="chatbox__content--header">
+                        <div class="chatbox__content--header">
+                            <h1 class="welcome-text">Hallo, ich bin Benjamin</h1>
+                            <p class="welcome-text">Wie kann ich Ihnen helfen?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chatbox__messages"></div>
+                <div class="chatbox__footer">
+                    <input type="text" placeholder="Schreiben Sie eine Nachricht...">
+                    <button class="chatbox__send--footer send__button">Senden</button>
+                </div>
+            </div>
+            <!-- Angepasster Chatbot-Button mit Bild -->
+            <div class="chatbox__button">
+                <button>
+                    <img src="{{ url_for('static', filename='img/chat-bot.png') }}" alt="Chatbot" width="82" height="82"/>
+                </button>
+                <!-- Angepasster Feedback-Button mit Bild -->
+                <button id="feedbackButton">
+                    <img src="{{ url_for('static', filename='img/feedback-icon.png') }}" alt="Feedback" width="60" height="60"/>
+                </button>
+            </div>
+            </div>
+            </div>  
+            <!-- Feedback Form -->
+            <div id="feedbackForm">
+                <form id="feedbackFormContent" onsubmit="sendFeedback(); return false;">
+                    <div> 
+                        <!-- Entferne die Inline-Event-Handler -->
+                        <span class="emoji" data-value="1">😡</span>
+                        <span class="emoji" data-value="2">😟</span>
+                        <span class="emoji" data-value="3">😐</span>
+                        <span class="emoji" data-value="4">🙂</span>
+                        <span class="emoji" data-value="5">😀</span>
+                    </div>
+                    <input type="hidden" id="feedbackRating" value="">
+                    <input type="text" id="feedbackName" placeholder="Ihr Name" required>
+                    <input type="email" id="feedbackEmail" placeholder="Ihre E-Mail" required>
+                    <textarea id="feedbackText" rows="3" placeholder="Ihr Feedback hier..." required></textarea>
+                    <button type="submit" class="feedback-send-button">Senden</button>
+                </form>
+            </div>
